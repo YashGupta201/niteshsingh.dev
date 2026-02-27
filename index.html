@@ -1,1 +1,102 @@
-Nitesh Singh Isbm College Of Engineering
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nitesh Singh — Portfolio</title>
+  <meta name="description" content="Simple portfolio for Nitesh Singh" />
+  <style>
+    :root{--bg:#0b0f17;--card:#121a27;--text:#e7ecf5;--muted:#a8b3c7;--accent:#6aa9ff;--border:rgba(255,255,255,.08)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:linear-gradient(180deg,#0b0f17,#070a10);color:var(--text);line-height:1.55}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:980px;margin:0 auto;padding:28px 18px 56px}
+    header{padding:22px 0 10px}
+    .hero{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-end;justify-content:space-between}
+    .title h1{margin:0;font-size:2rem;letter-spacing:.2px}
+    .title p{margin:8px 0 0;color:var(--muted)}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .tag{border:1px solid var(--border);background:rgba(255,255,255,.03);padding:6px 10px;border-radius:999px;font-size:.85rem;color:var(--muted)}
+    .card{border:1px solid var(--border);background:rgba(18,26,39,.72);backdrop-filter:blur(8px);border-radius:14px;padding:18px}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px}
+    @media (min-width:800px){.grid{grid-template-columns:1.25fr .75fr}}
+    h2{margin:0 0 10px;font-size:1.1rem}
+    ul{margin:10px 0 0;padding-left:18px}
+    li{margin:6px 0;color:var(--muted)}
+    .muted{color:var(--muted)}
+    .btns{display:flex;flex-wrap:wrap;gap:10px}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:rgba(255,255,255,.03);padding:10px 12px;border-radius:10px;color:var(--text)}
+    .btn:hover{background:rgba(255,255,255,.06);text-decoration:none}
+    footer{margin-top:22px;color:var(--muted);font-size:.9rem}
+    .small{font-size:.85rem}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="hero">
+        <div class="title">
+          <h1>Nitesh Singh</h1>
+          <p>Student at ISBM College of Engineering</p>
+          <div class="tags" aria-label="Skills">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Web Development</span>
+          </div>
+        </div>
+        <div class="btns" aria-label="Contact links">
+          <a class="btn" href="mailto:nitesh@example.com">Email</a>
+          <a class="btn" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>About</h2>
+        <p class="muted">
+          Hi, I’m Nitesh Singh. I’m learning web development and building small projects to improve my skills.
+          I enjoy creating clean, simple websites and user interfaces.
+        </p>
+
+        <h2 style="margin-top:16px">Projects</h2>
+        <ul>
+          <li><strong>Portfolio Website</strong> — A simple personal website to showcase my work.</li>
+          <li><strong>Mini Web App</strong> — A small app to practice JavaScript basics.</li>
+          <li><strong>College Project</strong> — A project built as part of coursework.</li>
+        </ul>
+      </section>
+
+      <aside class="card">
+        <h2>Education</h2>
+        <p class="muted" style="margin:0">ISBM College of Engineering</p>
+        <p class="muted small" style="margin:6px 0 0">(Add your degree and year here)</p>
+
+        <h2 style="margin-top:16px">Skills</h2>
+        <ul>
+          <li>HTML, CSS</li>
+          <li>JavaScript (Basics)</li>
+          <li>Responsive Design</li>
+        </ul>
+
+        <h2 style="margin-top:16px">Contact</h2>
+        <p class="muted" style="margin:0">
+          Email: <a href="mailto:nitesh@example.com">nitesh@example.com</a><br />
+          Location: <span class="muted">(Add your city)</span>
+        </p>
+      </aside>
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> Nitesh Singh</span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
